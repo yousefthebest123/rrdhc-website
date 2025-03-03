@@ -9,27 +9,68 @@ body {
     background-size: cover;
 }
 
-/* Butterflies Animation */
-#butterflies-container {
+/* Background Particles */
+#particles-js {
     position: fixed;
     width: 100%;
     height: 100%;
-    pointer-events: none;
+    z-index: -1;
 }
 
-.butterfly {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background: url('butterfly.png') no-repeat center center;
-    background-size: contain;
-    animation: flutter 5s infinite linear;
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(30, 61, 93, 0.7);
 }
 
-@keyframes flutter {
-    0% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
-    50% { transform: translateY(-30px) rotate(15deg); opacity: 1; }
-    100% { transform: translateY(0px) rotate(-15deg); opacity: 0.8; }
+.navbar a {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-shadow: 0 0 10px cyan;
+}
+
+/* Sections */
+.section {
+    background: rgba(30, 61, 93, 0.9);
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(172, 195, 217, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s ease-in-out;
+}
+
+/* Make sections appear on scroll */
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Buttons */
+.button {
+    background: linear-gradient(45deg, cyan, blue);
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+    box-shadow: 0px 0px 15px cyan;
+}
+
+.button:hover {
+    background: linear-gradient(45deg, blue, cyan);
+    box-shadow: 0px 0px 25px cyan;
 }
 
 /* Reviews */
@@ -55,20 +96,4 @@ body {
     height: 50px;
     border-radius: 50%;
     margin-right: 10px;
-}
-
-/* Buttons */
-.button {
-    background: linear-gradient(45deg, cyan, blue);
-    padding: 12px 24px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #fff;
-    transition: 0.3s;
-    box-shadow: 0px 0px 15px cyan;
-}
-
-.button:hover {
-    background: linear-gradient(45deg, blue, cyan);
-    box-shadow: 0px 0px 25px cyan;
 }
