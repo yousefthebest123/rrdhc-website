@@ -23,34 +23,13 @@ body {
     height: 30px;
     background: url('butterfly.png') no-repeat center center;
     background-size: contain;
-    animation: float 5s infinite;
+    animation: flutter 5s infinite linear;
 }
 
-@keyframes float {
-    0% { transform: translateY(0px); opacity: 0.8; }
-    50% { transform: translateY(-30px); opacity: 1; }
-    100% { transform: translateY(0px); opacity: 0.8; }
-}
-
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    background: rgba(30, 61, 93, 0.7);
-}
-
-.navbar a {
-    color: #fff;
-    padding: 10px;
-    text-decoration: none;
-}
-
-.navbar a:hover {
-    text-shadow: 0 0 10px cyan;
+@keyframes flutter {
+    0% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
+    50% { transform: translateY(-30px) rotate(15deg); opacity: 1; }
+    100% { transform: translateY(0px) rotate(-15deg); opacity: 0.8; }
 }
 
 /* Reviews */
@@ -72,8 +51,8 @@ body {
 }
 
 .review img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin-right: 10px;
 }
