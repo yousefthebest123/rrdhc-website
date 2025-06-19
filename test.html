@@ -1,0 +1,9 @@
+<?php
+// test.php
+
+// get the 'id' parameter from GET, default empty string
+$id = $_GET['id'] ?? '';
+
+// simulate vulnerable output (do NOT do this on real production sites)
+echo "You searched for ID: " . $id;
+?>
